@@ -36,9 +36,10 @@ Customer Order Management System
 ```
 # .env configuration 
 create a file named .env and add these details form your neon tech web page 
-
+```
 DB_NAME=dbName
 DB_USER=dbUserName
 DB_PASSWORD=password
 DB_HOST=ep-sparkling-dew-a4x74dcj-pooler.us-east-1.aws.neon.tech // 
 DB_PORT=5432\
+```
