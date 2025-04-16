@@ -14,7 +14,7 @@ def handle_add(name_box, product_box, quantity_box, price_box, tree):
         price = float(price_box.get())
 
         if not name or not product or quantity < 0 or price < 0:
-            raise ValueError("All fields are required and must be valid.")
+            raise ValueError("All fields are requiread .")
 
         insert_order(name, product, quantity, price)
         

@@ -11,7 +11,7 @@ from app.gui.main_Window import handle_add, refresh_table
 
 #\
 
-def launch_gui():
+def get_gui():
     global name_box, product_box, quantity_box, price_box, tree
 
     root = tk.Tk()

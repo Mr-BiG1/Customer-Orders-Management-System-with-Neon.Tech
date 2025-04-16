@@ -8,7 +8,7 @@ import sys
 
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
-from app.gui.layout import launch_gui # type: ignore
+from app.gui.layout import get_gui # type: ignore
 
 if __name__ == "__main__":
-    launch_gui()
+    get_gui()
