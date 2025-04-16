@@ -1,5 +1,5 @@
 from tkinter import messagebox
-from db.orders import insert_order,get_all_order_data
+from app.db.orders import insert_order,get_all_order_data
 
 def handle_add(name_entry, product_entry, qty_entry, price_entry, tree):
     try:

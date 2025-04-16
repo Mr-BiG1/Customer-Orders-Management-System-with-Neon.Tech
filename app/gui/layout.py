@@ -1,8 +1,9 @@
 import tkinter as tk
 from tkinter import ttk
 # from db.orders import create_orders_DB
-from db.orders import create_orders_DB
-from gui.main_Window import handle_add, refresh_table
+from app.db.orders import create_orders_DB
+from app.gui.main_Window import handle_add, refresh_table
+
 #\
 
 def launch_gui():
