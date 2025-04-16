@@ -3,11 +3,11 @@
 # PROG2390 
 # 8959922
 
-from .connection import get_connection
+from .connection import connection
 
 # creating table
 def create_orders_DB():
-    conn = get_connection()
+    conn = connection()
     cur = conn.cursor()
     cur.execute("""
         CREATE TABLE IF NOT EXISTS orders (
@@ -27,7 +27,7 @@ def create_orders_DB():
 
 # data insert function 
 def insert_order(name, product, quantity, price):
-    conn = get_connection()
+    conn = connection()
     cur = conn.cursor()
     cur.execute("""
         INSERT INTO orders (customer_name, product, quantity, price)
@@ -39,7 +39,7 @@ def insert_order(name, product, quantity, price):
 
 # fetch all daat
 def get_all_order_data():
-    conn = get_connection()
+    conn = connection()
     cur = conn.cursor()
     cur.execute("SELECT * FROM orders ORDER BY id")
     rows = cur.fetchall()
