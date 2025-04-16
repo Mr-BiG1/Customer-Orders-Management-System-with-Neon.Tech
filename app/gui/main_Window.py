@@ -1,3 +1,8 @@
+# Darsan Sabu George 
+# 2025-04-16
+# PROG2390 
+# 8959922
+
 from tkinter import messagebox
 from app.db.orders import insert_order,get_all_order_data
 
@@ -12,6 +17,7 @@ def handle_add(name_entry, product_entry, qty_entry, price_entry, tree):
             raise ValueError("All fields are required and must be valid.")
 
         insert_order(name, product, quantity, price)
+        
         refresh_table(tree)
 
         name_entry.delete(0, 'end')
@@ -20,7 +26,7 @@ def handle_add(name_entry, product_entry, qty_entry, price_entry, tree):
         price_entry.delete(0, 'end')
 
     except Exception as e:
-        messagebox.showerror("Input Error", str(e))
+        messagebox.showerror("Input Errore", str(e))
 
 def refresh_table(tree):
     for row in tree.get_children():

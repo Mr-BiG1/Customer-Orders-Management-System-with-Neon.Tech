@@ -1,5 +1,11 @@
+# Darsan Sabu George 
+# 2025-04-16
+# PROG2390 
+# 8959922
+
 from .connection import get_connection
 
+# creating table
 def create_orders_DB():
     conn = get_connection()
     cur = conn.cursor()
@@ -18,6 +24,8 @@ def create_orders_DB():
     cur.close()
     conn.close()
 
+
+# data insert function 
 def insert_order(name, product, quantity, price):
     conn = get_connection()
     cur = conn.cursor()
@@ -29,6 +37,7 @@ def insert_order(name, product, quantity, price):
     cur.close()
     conn.close()
 
+# fetch all daat
 def get_all_order_data():
     conn = get_connection()
     cur = conn.cursor()
