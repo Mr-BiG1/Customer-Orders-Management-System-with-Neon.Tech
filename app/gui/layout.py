@@ -12,7 +12,7 @@ from app.gui.main_Window import handle_add, refresh_table
 #\
 
 def launch_gui():
-    global name_entry, product_entry, qty_entry, price_entry, tree
+    global name_box, product_box, quantity_box, price_box, tree
 
     root = tk.Tk()
     root.title("Customer Orders Management System")
@@ -24,23 +24,23 @@ def launch_gui():
     form.pack(pady=10)
 
     tk.Label(form, text="Customer Name").grid(row=0, column=0)
-    name_entry = tk.Entry(form)
-    name_entry.grid(row=1, column=0)
+    name_box = tk.Entry(form)
+    name_box.grid(row=1, column=0)
 
     tk.Label(form, text="Product").grid(row=0, column=1)
-    product_entry = tk.Entry(form)
-    product_entry.grid(row=1, column=1)
+    product_box = tk.Entry(form)
+    product_box.grid(row=1, column=1)
 
     tk.Label(form, text="Quantity").grid(row=0, column=2)
-    qty_entry = tk.Entry(form)
-    qty_entry.grid(row=1, column=2)
+    quantity_box = tk.Entry(form)
+    quantity_box.grid(row=1, column=2)
 
     tk.Label(form, text="Price").grid(row=0, column=3)
-    price_entry = tk.Entry(form)
-    price_entry.grid(row=1, column=3)
+    price_box = tk.Entry(form)
+    price_box.grid(row=1, column=3)
 
     tk.Button(form, text="Add Order", command=lambda: handle_add(
-        name_entry, product_entry, qty_entry, price_entry, tree)).grid(row=1, column=4, padx=10)
+        name_box, product_box, quantity_box, price_box, tree)).grid(row=1, column=4, padx=10)
 
 # on screen items.
     columns = ("ID", "Customer", "Product", "Qty", "Price", "Date")
@@ -53,4 +53,3 @@ def launch_gui():
 # refresh 
     refresh_table(tree)
     root.mainloop()
-

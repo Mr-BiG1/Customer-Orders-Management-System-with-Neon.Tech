@@ -6,12 +6,12 @@
 from tkinter import messagebox
 from app.db.orders import insert_order,get_all_order_data
 
-def handle_add(name_entry, product_entry, qty_entry, price_entry, tree):
+def handle_add(name_box, product_box, quantity_box, price_box, tree):
     try:
-        name = name_entry.get().strip()
-        product = product_entry.get().strip()
-        quantity = int(qty_entry.get())
-        price = float(price_entry.get())
+        name = name_box.get().strip()
+        product = product_box.get().strip()
+        quantity = int(quantity_box.get())
+        price = float(price_box.get())
 
         if not name or not product or quantity < 0 or price < 0:
             raise ValueError("All fields are required and must be valid.")
@@ -19,11 +19,11 @@ def handle_add(name_entry, product_entry, qty_entry, price_entry, tree):
         insert_order(name, product, quantity, price)
         
         refresh_table(tree)
-
-        name_entry.delete(0, 'end')
-        product_entry.delete(0, 'end')
-        qty_entry.delete(0, 'end')
-        price_entry.delete(0, 'end')
+        
+        name_box.delete(0, 'end')
+        product_box.delete(0, 'end')
+        quantity_box.delete(0, 'end')
+        price_box.delete(0, 'end')
 
     except Exception as e:
         messagebox.showerror("Input Errore", str(e))
