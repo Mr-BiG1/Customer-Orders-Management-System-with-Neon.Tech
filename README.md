@@ -41,5 +41,5 @@ DB_NAME=dbName
 DB_USER=dbUserName
 DB_PASSWORD=password
 DB_HOST=ep-sparkling-dew-a4x74dcj-pooler.us-east-1.aws.neon.tech // 
-DB_PORT=5432\
+DB_PORT=5432
 ```
